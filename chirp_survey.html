@@ -27,7 +27,7 @@
     min-height: 100vh;
   }
 
-  /* ── Header ── */
+  /* ââ Header ââ */
   .site-header {
     background: var(--blue);
     color: white;
@@ -46,10 +46,10 @@
   .header-text h1 { font-size: 1.2rem; font-weight: 700; }
   .header-text p  { font-size: 0.82rem; opacity: 0.85; margin-top: 2px; }
 
-  /* ── Layout ── */
+  /* ââ Layout ââ */
   .container { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
 
-  /* ── Week nav pills ── */
+  /* ââ Week nav pills ââ */
   .week-nav {
     display: flex; gap: 8px; flex-wrap: wrap;
     margin-bottom: 24px;
@@ -63,7 +63,7 @@
   .week-pill.done     { background: var(--green-light); border-color: var(--green); color: var(--green); }
   .week-pill.locked   { opacity: 0.45; }
 
-  /* ── Card ── */
+  /* ââ Card ââ */
   .card {
     background: white; border-radius: var(--radius);
     box-shadow: var(--shadow); padding: 28px 30px;
@@ -82,11 +82,11 @@
     border-radius: 6px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600;
   }
 
-  /* ── Student info grid ── */
+  /* ââ Student info grid ââ */
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 10px; }
   @media(max-width: 520px){ .info-grid { grid-template-columns: 1fr; } }
 
-  /* ── Form elements ── */
+  /* ââ Form elements ââ */
   label { display: block; font-size: 0.83rem; font-weight: 600; color: #444; margin-bottom: 5px; }
 
   input[type=text], textarea, select {
@@ -101,7 +101,7 @@
 
   .form-group { margin-bottom: 18px; }
 
-  /* ── Question block ── */
+  /* ââ Question block ââ */
   .question-block {
     background: var(--gray-light); border-radius: 10px;
     padding: 16px 18px; margin-bottom: 14px;
@@ -115,7 +115,7 @@
   .q-text { font-size: 0.95rem; font-weight: 600; margin-bottom: 10px; line-height: 1.45; }
   .q-hint { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; font-style: italic; }
 
-  /* ── Likert scale ── */
+  /* ââ Likert scale ââ */
   .likert { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
   .likert-opt { flex: 1; min-width: 70px; }
   .likert-opt input { display: none; }
@@ -136,7 +136,7 @@
   .likert-opt input:checked + label .circle { border-color: var(--blue); background: var(--blue); }
   .likert-opt input:checked + label .circle::after { content: ''; width: 8px; height: 8px; background: white; border-radius: 50%; }
 
-  /* ── Submit button ── */
+  /* ââ Submit button ââ */
   .btn-submit {
     display: block; width: 100%; padding: 14px;
     background: var(--blue); color: white;
@@ -146,7 +146,7 @@
   .btn-submit:hover { background: #1349a0; }
   .btn-submit:disabled { background: #9bb3d4; cursor: not-allowed; }
 
-  /* ── States ── */
+  /* ââ States ââ */
   .locked-msg {
     text-align: center; padding: 60px 30px;
     background: white; border-radius: var(--radius); box-shadow: var(--shadow);
@@ -192,10 +192,10 @@
 <body>
 
 <header class="site-header">
-  <div class="header-logo">🔬</div>
+  <div class="header-logo">ð¬</div>
   <div class="header-text">
     <h1>CHIRP Summer Research Program</h1>
-    <p>Rutgers Honors College · Weekly Reflection Survey</p>
+    <p>Rutgers Honors College Â· Weekly Reflection Survey</p>
   </div>
 </header>
 
@@ -209,161 +209,152 @@
 
 </div>
 
-<footer>CHIRP · Rutgers Honors College · Responses are stored securely for program evaluation purposes.</footer>
+<footer>CHIRP Â· Rutgers Honors College Â· Responses are stored securely for program evaluation purposes.</footer>
 
 <script>
-// ════════════════════════════════════════════════════════
-//  ⚙️  CONFIGURATION  — edit these values each summer
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+//  âï¸  CONFIGURATION  â edit these values each summer
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 const CONFIG = {
   // Paste your Google Apps Script Web App URL here after setup:
   SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwOHv6A33mA8bc7t_jonyY7VjUFAxkxwrFmqtpBtM5d0mlQUJXbzfGMAoDnv_HeTgCIEg/exec",
 
-  // Program start date (Monday of Week 1 — students do NOT fill this week)
-  // Format: "YYYY-MM-DD"
-  PROGRAM_START: "2026-06-01",
-
-  // Each survey opens on this day of each program week (0=Sun, 1=Mon … 5=Fri, 6=Sat)
-  // Default: Monday (1) of each week students CAN fill
-  SURVEY_OPENS_DAY: 1,
+  // Program start date (first survey open date)
+  PROGRAM_START: "2026-06-09",
 
   // Program year label
   YEAR: "2026",
 };
 
-// ════════════════════════════════════════════════════════
-//  Survey content — 5 reflection weeks + final
-// ════════════════════════════════════════════════════════
+// ─────────────────────────────────────────────────────────
+//  Survey data – 5 weekly reflection weeks + final
+// ─────────────────────────────────────────────────────────
 
 const SURVEYS = [
-  // ── WEEK 2 (program week index 1) ──
+  // ── WEEK 1 (June 9, 2026) ──
   {
-    programWeek: 2,
+    programWeek: 1,
     title: "Getting Started",
     focus: "Research placement, curiosity, belonging",
-    weekIndex: 1,  // 0-based: survey unlocks at program start + 1 week
+    openDate: "2026-06-09T06:00:00",
     sections: [
       {
         heading: "About Your Placement",
         questions: [
-          { id:"w2_q1", type:"text",     label:"What research group are you in and who is your mentor?", required:true },
-          { id:"w2_q2", type:"textarea", label:"In 2–3 sentences, describe your project.", required:true },
-          { id:"w2_q3", type:"textarea", label:"What did you work on this week (trainings, reading, lab/clinical exposure)?" },
-          { id:"w2_q4", type:"textarea", label:"What is one question you're most excited to explore this summer?", required:true },
-        ]
-      },
-      {
-        heading: "Interdisciplinary Awareness",
-        questions: [
+          { id:"w1_q1", type:"text",     label:"Your name", required:true },
+          { id:"w1_q2", type:"text",     label:"Research Lab", required:true },
+          { id:"w1_q3", type:"text",     label:"What research group are you in, and who is your mentor?", required:true },
+          { id:"w1_q4", type:"textarea", label:"In 2–3 sentences, describe your project.", required:true },
+          { id:"w1_q5", type:"textarea", label:"What were your primary tasks or activities in the lab this week? Maybe talk about research techniques you learned?" },
+          { id:"w1_q6", type:"textarea", label:"What is one research question you're most excited to explore this summer?", required:true },
           {
-            id:"w2_q5", type:"likert",
+            id:"w1_q7", type:"likert",
             label:"How welcome and included do you feel in your research environment so far?",
             options:["Not at all","Slightly","Moderately","Quite","Very much"],
             required:true
           },
-          { id:"w2_q6", type:"textarea", label:"Is there a research area or discipline outside your lab that you're already curious about? What and why?", highlight:true },
+          { id:"w1_q8", type:"textarea", label:"Is there another research lab at CHI that you would be interested in exploring? What and why?", highlight:true },
         ]
       }
     ]
   },
 
-  // ── WEEK 3 ──
+  // ── WEEK 2 (June 17, 2026) ──
   {
-    programWeek: 3,
+    programWeek: 2,
     title: "Why This Research Matters",
     focus: "Intellectual curiosity, purpose, interdisciplinary awareness",
-    weekIndex: 2,
+    openDate: "2026-06-17T06:00:00",
     sections: [
       {
         heading: "Research Purpose",
         questions: [
-          { id:"w3_q1", type:"textarea", label:"What gap in existing knowledge does your research address — and why does it matter in the real world?", required:true },
-          { id:"w3_q2", type:"textarea", label:"What progress did you make this week?" },
-          { id:"w3_q3", type:"textarea", label:"What is one thing you're looking forward to learning next?" },
-        ]
-      },
-      {
-        heading: "Interdisciplinary Awareness",
-        questions: [
-          {
-            id:"w3_q4", type:"likert",
-            label:"How connected does your project feel to fields outside your primary discipline?",
-            options:["Not at all","Slightly","Somewhat","Quite a bit","Deeply"],
-            required:true
-          },
-          { id:"w3_q5", type:"textarea", label:"Was there a moment this week when you wished you had knowledge or skills from a different field? Describe it.", highlight:true },
+          { id:"w2_q1", type:"textarea", label:"Before this program, did you know this problem you are working on (your project) existed? What changed in how you see it?", required:true },
+          { id:"w2_q2", type:"textarea", label:"Can you describe a real-world problem that your research could help solve? How directly does your project connect to it?" },
+          { id:"w2_q3", type:"textarea", label:"If you had to explain why your research matters to someone with no science background, what would you say?" },
+          { id:"w2_q4", type:"textarea", label:"What's missing — in knowledge, resources, or support — for your research to move from the lab to the real world?", highlight:true },
+          { id:"w2_q5", type:"textarea", label:"What is one thing (question or technique) you're most excited to tackle next week?" },
         ]
       }
     ]
   },
 
-  // ── WEEK 4 ──
+  // ── WEEK 3 (June 22, 2026) ──
   {
-    programWeek: 4,
+    programWeek: 3,
     title: "Skills & Problem-Solving",
     focus: "Research skills, adaptability, navigating complexity",
-    weekIndex: 3,
+    openDate: "2026-06-22T06:00:00",
     sections: [
       {
         heading: "Skills & Challenges",
         questions: [
-          { id:"w4_q1", type:"textarea", label:"What new skill (technical, analytical, or professional) are you developing?", required:true },
-          { id:"w4_q2", type:"textarea", label:"Describe a challenge or moment that required problem-solving. How did you respond?" },
-          { id:"w4_q3", type:"textarea", label:"What felt like a small win this week?" },
-        ]
-      },
-      {
-        heading: "Navigating Complexity",
-        questions: [
           {
-            id:"w4_q4", type:"likert",
-            label:"How confident are you navigating unfamiliar methods, tools, or concepts in your lab?",
+            id:"w3_q1", type:"likert",
+            label:"How confident are you in navigating unfamiliar methods, tools, or concepts in your lab?",
             options:["Not confident","Slightly","Somewhat","Quite","Very confident"],
             required:true
           },
-          { id:"w4_q5", type:"textarea", label:"Was there a question you couldn't answer because it required expertise from a different field? What was it?", highlight:true },
+          { id:"w3_q2", type:"textarea", label:"What new skill (technical or professional) are you currently developing/ working on?", required:true },
+          { id:"w3_q3", type:"textarea", label:"Describe a challenge or moment that required problem-solving. How did you respond?" },
+          { id:"w3_q4", type:"textarea", label:"What felt like a small win this week?", highlight:true },
         ]
       }
     ]
   },
 
-  // ── WEEK 5 ──
+  // ── WEEK 4 (June 30, 2026) ──
   {
-    programWeek: 5,
+    programWeek: 4,
     title: "Thinking Like a Researcher",
     focus: "Critical thinking, methodology, interdisciplinary gaps",
-    weekIndex: 4,
+    openDate: "2026-06-30T06:00:00",
     sections: [
       {
         heading: "Critical Thinking",
         questions: [
-          { id:"w5_q1", type:"textarea", label:"What is one limitation or challenge in your current research approach?", required:true },
-          { id:"w5_q2", type:"textarea", label:"What is an alternative way to address it?" },
-          { id:"w5_q3", type:"textarea", label:"What did this week teach you about how research actually works?" },
-        ]
-      },
-      {
-        heading: "Interdisciplinary Exposure",
-        questions: [
-          {
-            id:"w5_q4", type:"likert",
-            label:"How much has this program exposed you to research methods or knowledge from fields outside your own?",
-            options:["None at all","A little","Somewhat","Quite a bit","A great deal"],
-            required:true
-          },
-          { id:"w5_q5", type:"textarea", label:"If you could collaborate with someone from any other scientific field, who would it be and what would you investigate together?", highlight:true },
+          { id:"w4_q1", type:"textarea", label:"What is one limitation or challenge in your current research approach?", required:true },
+          { id:"w4_q2", type:"textarea", label:"What is an alternative way to address it?" },
+          { id:"w4_q3", type:"textarea", label:"If you could collaborate with someone from any other scientific field, who would it be and what would you investigate together?", highlight:true },
+          { id:"w4_q4", type:"textarea", label:"What did this week teach you about how research actually works?" },
+          { id:"w4_q5", type:"textarea", label:"What's one thing you're proud of from this week, no matter how small?" },
         ]
       }
     ]
   },
 
-  // ── WEEK 6 ──
+  // ── WEEK 5 (July 7, 2026) ──
+  {
+    programWeek: 5,
+    title: "Mentorship & Future Paths",
+    focus: "Professional identity, mentorship quality, program reflection",
+    openDate: "2026-07-07T06:00:00",
+    sections: [
+      {
+        heading: "Mentorship",
+        questions: [
+          { id:"w5_q1", type:"textarea", label:"How has mentorship shaped your experience in CHIRP?", required:true },
+          {
+            id:"w5_q2", type:"likert",
+            label:"How well did your mentor help you understand the broader context of your project (beyond just your lab's work)?",
+            options:["Not at all","Slightly","Somewhat","Quite well","Extremely well"],
+            required:true
+          },
+          { id:"w5_q3", type:"textarea", label:"Has this program influenced your academic or career interests? How?" },
+          { id:"w5_q4", type:"textarea", label:"What type of training or knowledge do you wish CHIRP had provided that it didn't?", highlight:true, required:true },
+          { id:"w5_q5", type:"textarea", label:"What was a highlight of your week?" },
+        ]
+      }
+    ]
+  },
+
+  // ── WEEK 6 (July 14, 2026) ──
   {
     programWeek: 6,
     title: "Mentorship & Future Paths",
     focus: "Professional identity, mentorship quality, program reflection",
-    weekIndex: 5,
+    openDate: "2026-07-14T06:00:00",
     sections: [
       {
         heading: "Mentorship",
@@ -371,86 +362,71 @@ const SURVEYS = [
           { id:"w6_q1", type:"textarea", label:"How has mentorship shaped your experience in CHIRP?", required:true },
           {
             id:"w6_q2", type:"likert",
-            label:"How well did your mentor help you understand the broader context of your project (beyond just your lab)?",
+            label:"How well did your mentor help you understand the broader context of your project (beyond just your lab's work)?",
             options:["Not at all","Slightly","Somewhat","Quite well","Extremely well"],
             required:true
           },
           { id:"w6_q3", type:"textarea", label:"Has this program influenced your academic or career interests? How?" },
-        ]
-      },
-      {
-        heading: "What's Missing",
-        questions: [
-          { id:"w6_q4", type:"textarea", label:"What type of training or knowledge do you wish CHIRP had provided that it didn't? Be specific.", highlight:true, required:true },
+          { id:"w6_q4", type:"textarea", label:"What type of training or knowledge do you wish CHIRP had provided that it didn't?", highlight:true, required:true },
           { id:"w6_q5", type:"textarea", label:"What was a highlight of your week?" },
         ]
       }
     ]
   },
 
-  // ── WEEK 8 (FINAL) ──
+  // ── FINAL (July 29, 2026) ──
   {
     programWeek: 8,
     title: "Final Impact Reflection",
     focus: "End-of-program · Complete once before your last week ends",
-    weekIndex: 6,   // unlocks at program start + 6 weeks (i.e., program week 7-8 window)
+    openDate: "2026-07-29T06:00:00",
     isFinal: true,
     sections: [
       {
         heading: "Impact Statements",
         questions: [
           { id:"fin_q1", type:"textarea", label:"What was the most impactful part of CHIRP for you?", required:true },
-          { id:"fin_q2", type:"textarea", label:"How did this program shape your understanding of research or child health?", required:true },
+          { id:"fin_q2", type:"textarea", label:"How did this program shape your understanding of what research is?", required:true },
+          { id:"fin_q3", type:"textarea", label:"Was there a type of training that was missing from CHIRP that would have made it more valuable? Please be specific.", highlight:true, required:true },
+          { id:"fin_q4", type:"textarea", label:"One suggestion to improve CHIRP for future students' research experience.", required:true },
           {
-            id:"fin_q3", type:"likert",
-            label:"How prepared do you feel to work on a research project that requires knowledge from multiple scientific fields?",
-            options:["Not at all","Slightly","Somewhat","Quite prepared","Fully prepared"],
+            id:"fin_q5", type:"likert",
+            label:"How would you rate the CHIRP program overall?",
+            options:["1 - Poor","2","3","4","5 - Excellent"],
             required:true
           },
-          { id:"fin_q4", type:"textarea", label:"Did CHIRP expose you to interdisciplinary collaboration or thinking? If yes, describe. If no — what was missing?", highlight:true, required:true },
-          { id:"fin_q5", type:"textarea", label:"One suggestion to improve CHIRP for future students.", required:true },
-          { id:"fin_q6", type:"text",     label:'Optional: Complete this sentence — "CHIRP taught me that…"' },
         ]
       }
     ]
   }
 ];
-
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 //  Date logic
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function getActiveSurveyIndex() {
   const now = new Date();
-  const start = new Date(CONFIG.PROGRAM_START + "T00:00:00");
-  const msSinceStart = now - start;
-  if (msSinceStart < 0) return -1; // program hasn't started
-
-  const daysSinceStart = Math.floor(msSinceStart / (1000 * 60 * 60 * 24));
-  const weeksSinceStart = Math.floor(daysSinceStart / 7);
-
-  // Find the furthest unlocked survey
   let active = -1;
   for (let i = 0; i < SURVEYS.length; i++) {
-    if (weeksSinceStart >= SURVEYS[i].weekIndex) active = i;
+    const openDate = new Date(SURVEYS[i].openDate);
+    if (now >= openDate) {
+      active = i;
+    }
   }
   return active;
 }
 
 function getSurveyOpenDate(survey) {
-  const start = new Date(CONFIG.PROGRAM_START + "T00:00:00");
-  const d = new Date(start);
-  d.setDate(d.getDate() + survey.weekIndex * 7);
-  return d;
+  return new Date(survey.openDate);
 }
 
 function formatDate(d) {
   return d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric' });
 }
 
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 //  Render
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function renderNav(activeIdx) {
   const nav = document.getElementById('weekNav');
@@ -460,7 +436,7 @@ function renderNav(activeIdx) {
     pill.className = 'week-pill' +
       (i === activeIdx ? ' active' :
        i < activeIdx  ? ' done' : ' locked');
-    pill.textContent = s.isFinal ? '★ Final' : `Week ${s.programWeek}`;
+    pill.textContent = s.isFinal ? 'â Final' : `Week ${s.programWeek}`;
     nav.appendChild(pill);
   });
 }
@@ -469,7 +445,7 @@ function renderLocked(nextSurvey) {
   const openDate = getSurveyOpenDate(nextSurvey);
   return `
     <div class="locked-msg">
-      <div class="icon">🔒</div>
+      <div class="icon">ð</div>
       <h2>No Active Survey Right Now</h2>
       <p>Your next reflection isn't open yet. Check back on or after:</p>
       <p class="opens">${formatDate(openDate)}</p>
@@ -480,20 +456,20 @@ function renderLocked(nextSurvey) {
 function renderNotStarted() {
   return `
     <div class="locked-msg">
-      <div class="icon">🗓️</div>
+      <div class="icon">ðï¸</div>
       <h2>Program Hasn't Started Yet</h2>
       <p>CHIRP ${CONFIG.YEAR} begins <strong>${formatDate(new Date(CONFIG.PROGRAM_START + "T00:00:00"))}</strong>.</p>
-      <p style="margin-top:12px;">Bookmark this page — your first reflection opens in Week 2.</p>
+      <p style="margin-top:12px;">Bookmark this page â your first reflection opens in Week 2.</p>
     </div>`;
 }
 
 function renderSuccess(weekTitle) {
   return `
     <div class="success-msg">
-      <div class="icon">✅</div>
+      <div class="icon">â</div>
       <h2>Reflection Submitted!</h2>
-      <p>Thank you — your <strong>${weekTitle}</strong> reflection has been recorded.</p>
-      <p style="margin-top:10px;font-size:0.85rem;">Come back next week for the next reflection. You're doing great! 🌱</p>
+      <p>Thank you â your <strong>${weekTitle}</strong> reflection has been recorded.</p>
+      <p style="margin-top:10px;font-size:0.85rem;">Come back next week for the next reflection. You're doing great! ð±</p>
     </div>`;
 }
 
@@ -520,7 +496,7 @@ function renderSurvey(surveyIdx) {
 
   let html = `
     <div class="card">
-      <div class="card-title">${s.isFinal ? '★ Final Reflection — ' : ''}Week ${s.programWeek}: ${s.title}</div>
+      <div class="card-title">${s.isFinal ? 'â Final Reflection â ' : ''}Week ${s.programWeek}: ${s.title}</div>
       <div class="card-subtitle">
         <span class="badge">${s.isFinal ? 'End of Program' : `Program Week ${s.programWeek}`}</span>
         ${s.focus}
@@ -551,13 +527,13 @@ function renderSurvey(surveyIdx) {
     sec.questions.forEach((q, qi) => {
       const isHL = q.highlight ? ' highlight' : '';
       html += `<div class="question-block${isHL}">
-        <div class="q-label">Question ${qi + 1}${q.required ? ' <span class="required-star">★</span>' : ''}</div>
+        <div class="q-label">Question ${qi + 1}${q.required ? ' <span class="required-star">â</span>' : ''}</div>
         <div class="q-text">${q.label}</div>`;
 
       if (q.type === 'textarea') {
-        html += `<textarea id="${q.id}" name="${q.id}" rows="3" placeholder="Your response…" ${q.required?'required':''}></textarea>`;
+        html += `<textarea id="${q.id}" name="${q.id}" rows="3" placeholder="Your responseâ¦" ${q.required?'required':''}></textarea>`;
       } else if (q.type === 'text') {
-        html += `<input type="text" id="${q.id}" name="${q.id}" placeholder="Your response…" ${q.required?'required':''}>`;
+        html += `<input type="text" id="${q.id}" name="${q.id}" placeholder="Your responseâ¦" ${q.required?'required':''}>`;
       } else if (q.type === 'likert') {
         html += buildLikert(q, surveyIdx);
       }
@@ -568,8 +544,8 @@ function renderSurvey(surveyIdx) {
 
   html += `
         <button type="submit" class="btn-submit" id="submitBtn">
-          <span class="btn-label">Submit Reflection →</span>
-          <span class="spinner">Submitting…</span>
+          <span class="btn-label">Submit Reflection â</span>
+          <span class="spinner">Submittingâ¦</span>
         </button>
       </form>
     </div>`;
@@ -582,9 +558,9 @@ function renderSurvey(surveyIdx) {
   });
 }
 
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 //  Submit to Google Apps Script
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 function submitForm(survey, surveyIdx) {
   const form = document.getElementById('chirpForm');
@@ -663,9 +639,9 @@ function submitForm(survey, surveyIdx) {
   });
 }
 
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 //  Init
-// ════════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 
 (function init() {
   const activeIdx = getActiveSurveyIndex();
