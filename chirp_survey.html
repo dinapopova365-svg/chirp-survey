@@ -27,7 +27,7 @@
     min-height: 100vh;
   }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Header Ã¢ÂÂÃ¢ÂÂ */
+  /* - Header  */
   .site-header {
     background: var(--blue);
     color: white;
@@ -46,10 +46,10 @@
   .header-text h1 { font-size: 1.2rem; font-weight: 700; }
   .header-text p  { font-size: 0.82rem; opacity: 0.85; margin-top: 2px; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Layout Ã¢ÂÂÃ¢ÂÂ */
+  /* - Layout  */
   .container { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Week nav pills Ã¢ÂÂÃ¢ÂÂ */
+  /* - Week nav pills  */
   .week-nav {
     display: flex; gap: 8px; flex-wrap: wrap;
     margin-bottom: 24px;
@@ -63,7 +63,7 @@
   .week-pill.done     { background: var(--green-light); border-color: var(--green); color: var(--green); }
   .week-pill.locked   { opacity: 0.45; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Card Ã¢ÂÂÃ¢ÂÂ */
+  /* - Card  */
   .card {
     background: white; border-radius: var(--radius);
     box-shadow: var(--shadow); padding: 28px 30px;
@@ -82,11 +82,11 @@
     border-radius: 6px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600;
   }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Student info grid Ã¢ÂÂÃ¢ÂÂ */
+  /* - Student info grid  */
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 10px; }
   @media(max-width: 520px){ .info-grid { grid-template-columns: 1fr; } }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Form elements Ã¢ÂÂÃ¢ÂÂ */
+  /* - Form elements  */
   label { display: block; font-size: 0.83rem; font-weight: 600; color: #444; margin-bottom: 5px; }
 
   input[type=text], textarea, select {
@@ -101,7 +101,7 @@
 
   .form-group { margin-bottom: 18px; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Question block Ã¢ÂÂÃ¢ÂÂ */
+  /* - Question block  */
   .question-block {
     background: var(--gray-light); border-radius: 10px;
     padding: 16px 18px; margin-bottom: 14px;
@@ -115,7 +115,7 @@
   .q-text { font-size: 0.95rem; font-weight: 600; margin-bottom: 10px; line-height: 1.45; }
   .q-hint { font-size: 0.8rem; color: var(--gray); margin-bottom: 10px; font-style: italic; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Likert scale Ã¢ÂÂÃ¢ÂÂ */
+  /* - Likert scale  */
   .likert { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
   .likert-opt { flex: 1; min-width: 70px; }
   .likert-opt input { display: none; }
@@ -136,7 +136,7 @@
   .likert-opt input:checked + label .circle { border-color: var(--blue); background: var(--blue); }
   .likert-opt input:checked + label .circle::after { content: ''; width: 8px; height: 8px; background: white; border-radius: 50%; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ Submit button Ã¢ÂÂÃ¢ÂÂ */
+  /* - Submit button  */
   .btn-submit {
     display: block; width: 100%; padding: 14px;
     background: var(--blue); color: white;
@@ -146,7 +146,7 @@
   .btn-submit:hover { background: #1349a0; }
   .btn-submit:disabled { background: #9bb3d4; cursor: not-allowed; }
 
-  /* Ã¢ÂÂÃ¢ÂÂ States Ã¢ÂÂÃ¢ÂÂ */
+  /* - States  */
   .locked-msg {
     text-align: center; padding: 60px 30px;
     background: white; border-radius: var(--radius); box-shadow: var(--shadow);
@@ -192,10 +192,10 @@
 <body>
 
 <header class="site-header">
-  <div class="header-logo">Ã°ÂÂÂ¬</div>
+  <div class="header-logo"></div>
   <div class="header-text">
     <h1>CHIRP Summer Research Program</h1>
-    <p>Rutgers Honors College ÃÂ· Weekly Reflection Survey</p>
+    <p>Rutgers Honors College  -  Weekly Reflection Survey</p>
   </div>
 </header>
 
@@ -209,12 +209,12 @@
 
 </div>
 
-<footer>CHIRP ÃÂ· Rutgers Honors College ÃÂ· Responses are stored securely for program evaluation purposes.</footer>
+<footer>CHIRP  -  Rutgers Honors College  -  Responses are stored securely for program evaluation purposes.</footer>
 
 <script>
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
-//  Ã¢ÂÂÃ¯Â¸Â  CONFIGURATION  Ã¢ÂÂ edit these values each summer
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
+//  -  CONFIGURATION   edit these values each summer
+// -
 
 const CONFIG = {
   // Paste your Google Apps Script Web App URL here after setup:
@@ -227,12 +227,12 @@ const CONFIG = {
   YEAR: "2026",
 };
 
-// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-//  Survey data â 5 weekly reflection weeks + final
-// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// -
+//  Survey data  -  5 weekly reflection weeks + final
+// -
 
 const SURVEYS = [
-  // ââ WEEK 1 (June 9, 2026) ââ
+  // - WEEK 1 (June 9, 2026) 
   {
     programWeek: 1,
     title: "Getting Started",
@@ -245,7 +245,7 @@ const SURVEYS = [
           { id:"w1_q1", type:"text",     label:"Your name", required:true },
           { id:"w1_q2", type:"text",     label:"Research Lab", required:true },
           { id:"w1_q3", type:"text",     label:"What research group are you in, and who is your mentor?", required:true },
-          { id:"w1_q4", type:"textarea", label:"In 2â3 sentences, describe your project.", required:true },
+          { id:"w1_q4", type:"textarea", label:"In 2-3 sentences, describe your project.", required:true },
           { id:"w1_q5", type:"textarea", label:"What were your primary tasks or activities in the lab this week? Maybe talk about research techniques you learned?" },
           { id:"w1_q6", type:"textarea", label:"What is one research question you're most excited to explore this summer?", required:true },
           {
@@ -260,7 +260,7 @@ const SURVEYS = [
     ]
   },
 
-  // ââ WEEK 2 (June 17, 2026) ââ
+  // - WEEK 2 (June 17, 2026) 
   {
     programWeek: 2,
     title: "Why This Research Matters",
@@ -273,14 +273,14 @@ const SURVEYS = [
           { id:"w2_q1", type:"textarea", label:"Before this program, did you know this problem you are working on (your project) existed? What changed in how you see it?", required:true },
           { id:"w2_q2", type:"textarea", label:"Can you describe a real-world problem that your research could help solve? How directly does your project connect to it?" },
           { id:"w2_q3", type:"textarea", label:"If you had to explain why your research matters to someone with no science background, what would you say?" },
-          { id:"w2_q4", type:"textarea", label:"What's missing â in knowledge, resources, or support â for your research to move from the lab to the real world?", highlight:true },
+          { id:"w2_q4", type:"textarea", label:"What's missing  -  in knowledge, resources, or support  -  for your research to move from the lab to the real world?", highlight:true },
           { id:"w2_q5", type:"textarea", label:"What is one thing (question or technique) you're most excited to tackle next week?" },
         ]
       }
     ]
   },
 
-  // ââ WEEK 3 (June 22, 2026) ââ
+  // - WEEK 3 (June 22, 2026) 
   {
     programWeek: 3,
     title: "Skills & Problem-Solving",
@@ -304,7 +304,7 @@ const SURVEYS = [
     ]
   },
 
-  // ââ WEEK 4 (June 30, 2026) ââ
+  // - WEEK 4 (June 30, 2026) 
   {
     programWeek: 4,
     title: "Thinking Like a Researcher",
@@ -324,7 +324,7 @@ const SURVEYS = [
     ]
   },
 
-  // ââ WEEK 5 (July 7, 2026) ââ
+  // - WEEK 5 (July 7, 2026) 
   {
     programWeek: 5,
     title: "Mentorship & Future Paths",
@@ -349,11 +349,11 @@ const SURVEYS = [
     ]
   },
 
-  // ââ FINAL (July 29, 2026) ââ
+  // - FINAL (July 29, 2026) 
   {
     programWeek: 8,
     title: "Final Impact Reflection",
-    focus: "End-of-program Â· Complete once before your last week ends",
+    focus: "End-of-program  -  Complete once before your last week ends",
     openDate: "2026-07-29T06:00:00",
     isFinal: true,
     sections: [
@@ -375,9 +375,9 @@ const SURVEYS = [
     ]
   }
 ];
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 //  Date logic
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 
 function getActiveSurveyIndex() {
   const now = new Date();
@@ -399,9 +399,9 @@ function formatDate(d) {
   return d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric' });
 }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 //  Render
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 
 function renderNav(activeIdx) {
   const nav = document.getElementById('weekNav');
@@ -411,7 +411,7 @@ function renderNav(activeIdx) {
     pill.className = 'week-pill' +
       (i === activeIdx ? ' active' :
        i < activeIdx  ? ' done' : ' locked');
-    pill.textContent = s.isFinal ? 'Ã¢ÂÂ Final' : `Week ${s.programWeek}`;
+    pill.textContent = s.isFinal ? ' Final' : `Week ${s.programWeek}`;
     nav.appendChild(pill);
   });
 }
@@ -420,7 +420,7 @@ function renderLocked(nextSurvey) {
   const openDate = getSurveyOpenDate(nextSurvey);
   return `
     <div class="locked-msg">
-      <div class="icon">Ã°ÂÂÂ</div>
+      <div class="icon"></div>
       <h2>No Active Survey Right Now</h2>
       <p>Your next reflection isn't open yet. Check back on or after:</p>
       <p class="opens">${formatDate(openDate)}</p>
@@ -431,20 +431,20 @@ function renderLocked(nextSurvey) {
 function renderNotStarted() {
   return `
     <div class="locked-msg">
-      <div class="icon">Ã°ÂÂÂÃ¯Â¸Â</div>
+      <div class="icon"></div>
       <h2>Program Hasn't Started Yet</h2>
       <p>CHIRP ${CONFIG.YEAR} begins <strong>${formatDate(new Date(CONFIG.PROGRAM_START + "T00:00:00"))}</strong>.</p>
-      <p style="margin-top:12px;">Bookmark this page Ã¢ÂÂ your first reflection opens in Week 2.</p>
+      <p style="margin-top:12px;">Bookmark this page  -  your first reflection opens in Week 2.</p>
     </div>`;
 }
 
 function renderSuccess(weekTitle) {
   return `
     <div class="success-msg">
-      <div class="icon">Ã¢ÂÂ</div>
+      <div class="icon"></div>
       <h2>Reflection Submitted!</h2>
-      <p>Thank you Ã¢ÂÂ your <strong>${weekTitle}</strong> reflection has been recorded.</p>
-      <p style="margin-top:10px;font-size:0.85rem;">Come back next week for the next reflection. You're doing great! Ã°ÂÂÂ±</p>
+      <p>Thank you  -  your <strong>${weekTitle}</strong> reflection has been recorded.</p>
+      <p style="margin-top:10px;font-size:0.85rem;">Come back next week for the next reflection. You're doing great! </p>
     </div>`;
 }
 
@@ -471,7 +471,7 @@ function renderSurvey(surveyIdx) {
 
   let html = `
     <div class="card">
-      <div class="card-title">${s.isFinal ? 'Ã¢ÂÂ Final Reflection Ã¢ÂÂ ' : ''}Week ${s.programWeek}: ${s.title}</div>
+      <div class="card-title">${s.isFinal ? ' Final Reflection  ' : ''}Week ${s.programWeek}: ${s.title}</div>
       <div class="card-subtitle">
         <span class="badge">${s.isFinal ? 'End of Program' : `Program Week ${s.programWeek}`}</span>
         ${s.focus}
@@ -502,13 +502,13 @@ function renderSurvey(surveyIdx) {
     sec.questions.forEach((q, qi) => {
       const isHL = q.highlight ? ' highlight' : '';
       html += `<div class="question-block${isHL}">
-        <div class="q-label">Question ${qi + 1}${q.required ? ' <span class="required-star">Ã¢ÂÂ</span>' : ''}</div>
+        <div class="q-label">Question ${qi + 1}${q.required ? ' <span class="required-star">*</span>' : ''}</div>
         <div class="q-text">${q.label}</div>`;
 
       if (q.type === 'textarea') {
-        html += `<textarea id="${q.id}" name="${q.id}" rows="3" placeholder="Your responseÃ¢ÂÂ¦" ${q.required?'required':''}></textarea>`;
+        html += `<textarea id="${q.id}" name="${q.id}" rows="3" placeholder="Your response*" ${q.required?'required':''}></textarea>`;
       } else if (q.type === 'text') {
-        html += `<input type="text" id="${q.id}" name="${q.id}" placeholder="Your responseÃ¢ÂÂ¦" ${q.required?'required':''}>`;
+        html += `<input type="text" id="${q.id}" name="${q.id}" placeholder="Your response*" ${q.required?'required':''}>`;
       } else if (q.type === 'likert') {
         html += buildLikert(q, surveyIdx);
       }
@@ -519,8 +519,8 @@ function renderSurvey(surveyIdx) {
 
   html += `
         <button type="submit" class="btn-submit" id="submitBtn">
-          <span class="btn-label">Submit Reflection Ã¢ÂÂ</span>
-          <span class="spinner">SubmittingÃ¢ÂÂ¦</span>
+          <span class="btn-label">Submit Reflection </span>
+          <span class="spinner">Submitting</span>
         </button>
       </form>
     </div>`;
@@ -533,9 +533,9 @@ function renderSurvey(surveyIdx) {
   });
 }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 //  Submit to Google Apps Script
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 
 function submitForm(survey, surveyIdx) {
   const form = document.getElementById('chirpForm');
@@ -614,9 +614,9 @@ function submitForm(survey, surveyIdx) {
   });
 }
 
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 //  Init
-// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+// -
 
 (function init() {
   const activeIdx = getActiveSurveyIndex();
